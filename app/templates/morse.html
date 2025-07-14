@@ -1,0 +1,17 @@
+<!doctype html>
+<title>Morse Code Converter</title>
+<h2>Morse Code Converter</h2>
+<form method="post" action="/convert">
+  <label>Text to Morse:</label><br>
+  <textarea name="text" type="text"></textarea>
+  <input type="submit" value="Convert to Morse">
+</form>
+<form method="post" action="/decode">
+  <label>Morse to Text:</label><br>
+  <textarea name="morse" type="text"></textarea>
+  <input type="submit" value="Convert to Text">
+</form>
+{% if result %}
+  <h3>Result:</h3>
+  <p>{{ result }}</p>
+{% endif %}
